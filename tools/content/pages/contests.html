@@ -1,0 +1,59 @@
+<!--meta {"title":"Catch of the Month Fishing Photo Contest","description":"Enter the free Sky.Fish Catch of the Month contest. Four categories, monthly prizes, judged by anglers. Monthly winners go forward to Angler of the Year.","path":"contests.html","nav":"","hero":"page","h1":"Catch of the Month","sub":"Free to enter. Four categories, a winner in each every month, and Angler of the Year at the end of the season.","hero_extra":"<p style=\"margin-top:18px;font-size:1.15rem\"><strong>This month closes in <span data-countdown=\"month-end\">—</span></strong></p>"} -->
+<section>
+  <div class="container">
+    <div class="grid g4">
+      <div class="card"><div class="icon">🏆</div><h3>Biggest Catch</h3><p>Longest fish of the month for its species group, measured on a board or tape and shown in the photo.</p></div>
+      <div class="card"><div class="icon">📸</div><h3>Best Photo</h3><p>Judged on light, composition and story. It doesn't have to be the biggest fish.</p></div>
+      <div class="card"><div class="icon">🧒</div><h3>Young Angler</h3><p>For anglers under 16. Must be entered by a parent or legal guardian.</p></div>
+      <div class="card"><div class="icon">🌿</div><h3>Release Hero</h3><p>Best catch-and-release photo, with the fish handled well and kept wet.</p></div>
+    </div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container grid g2" style="align-items:start">
+    <div>
+      <span class="eyebrow">Prizes</span>
+      <h2>What you can win</h2>
+      <ul>
+        <li><strong>Monthly category winners:</strong> a tackle gift card or gear pack. The value is announced at the start of each month with that month's sponsors.</li>
+        <li><strong>Angler of the Year:</strong> chosen from the monthly winners, with a headline prize such as a guided trip or premium rod and reel, announced each season.</li>
+        <li><strong>Every winner:</strong> featured on Sky.Fish and in The Weekend Bite newsletter.</li>
+      </ul>
+      <div class="callout cta">Brands, shops and charters can <a href="advertise.html">sponsor a monthly prize</a> and get credited here.</div>
+      <h2 class="mt2">How judging works</h2>
+      <p>A panel of experienced anglers scores each eligible entry from 1 to 10 on each category's criteria, plus fish handling and ethics. Ties go to the earlier entry. Winners are contacted by email within 10 days of the month closing and must reply within 14 days, or a runner-up is chosen.</p>
+      <h2>Official rules (summary)</h2>
+      <ol style="color:var(--muted)">
+        <li>No purchase or payment necessary. Void where prohibited.</li>
+        <li>Entrants must be 18+; anglers under 16 enter the Young Angler category through a parent or legal guardian, who is the entrant.</li>
+        <li>Fish must be caught legally, in season and in line with local size and bag limits during the contest month.</li>
+        <li>The photo must be your own original image, at least 1080 px on the long edge, with no watermarks. Light edits are fine; manipulated images are disqualified.</li>
+        <li>Up to 3 entries per person per month (supporters get one bonus entry).</li>
+        <li>By entering you grant Sky.Fish a non-exclusive, royalty-free licence to display your photo, first name and location on the site, newsletter and social channels, with credit. You keep your copyright.</li>
+        <li>Entries close at 11:59 pm (your local time) on the last day of the month.</li>
+        <li>Prizes cannot be exchanged for cash. Winners are responsible for any taxes. Sky.Fish may substitute a prize of equal or greater value.</li>
+      </ol>
+      <p class="muted" style="font-size:.88rem">Full terms are in our <a href="terms.html#contests">terms of use</a>. Contest operated by Sky.Fish.</p>
+    </div>
+    <form class="form-card" id="enter" data-sf-form="Catch of the Month entry" data-ok="Entry received! Good luck. Winners are announced in the newsletter after the month closes.">
+      <h2 style="font-size:1.6rem">Enter this month</h2>
+      <div class="field"><label for="c-cat">Category</label><select id="c-cat" name="Category" required><option value="">Choose…</option><option>Biggest Catch</option><option>Best Photo</option><option>Young Angler (entered by parent/guardian)</option><option>Release Hero</option></select></div>
+      <div class="row2"><div class="field"><label for="c-name">Entrant name</label><input id="c-name" name="Name" required></div><div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required></div></div>
+      <div class="row2"><div class="field"><label for="c-sp">Species</label><input id="c-sp" name="Species" required></div><div class="field"><label for="c-date">Date caught</label><input id="c-date" name="Date caught" type="date" required></div></div>
+      <div class="row2"><div class="field"><label for="c-len">Length (in or cm)</label><input id="c-len" name="Length"></div><div class="field"><label for="c-loc">Water / region</label><input id="c-loc" name="Location" required placeholder="General area is fine"></div></div>
+      <div class="field"><label for="c-photo">Photo link</label><input id="c-photo" name="Photo link" type="url" required placeholder="Google Drive, Dropbox, Instagram or iCloud share link"></div>
+      <div class="field"><label for="c-story">The story (optional)</label><textarea id="c-story" name="Story" placeholder="Bait, conditions, how the fight went…"></textarea></div>
+      <label class="check field"><input type="checkbox" required name="Rules accepted" value="Yes"> I have read the rules, the fish was caught legally, and the photo is my own (or my child's, if I'm entering as parent or guardian).</label>
+      <input class="hp" name="_honey" tabindex="-1" autocomplete="off">
+      <button class="btn btn-sun btn-block" type="submit">Submit entry</button>
+      <div class="form-msg" role="status"></div>
+    </form>
+  </div>
+</section>
+<section>
+  <div class="container center">
+    <h2>Winners' gallery</h2>
+    <p class="muted" style="max-width:60ch;margin:0 auto 18px">Our first winners will appear here when this month's contest closes. Your photo could be the first.</p>
+    <a class="btn btn-sun" href="#enter">Enter now</a>
+  </div>
+</section>
