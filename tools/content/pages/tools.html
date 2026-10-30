@@ -1,0 +1,55 @@
+<!--meta {"title":"Angler Tools — Fish Weight Calculator, Line Capacity & Converters","description":"Free angler tools: estimate fish weight from length and girth, calculate reel line capacity for a new line, convert fishing units and build a trip checklist.","path":"tools.html","nav":"tools","hero":"page","h1":"Angler Tools","sub":"Quick calculators for the dock, the boat and the tackle bench. They all run in your browser and work offline once loaded."} -->
+<section style="padding-top:36px">
+  <div class="container grid g2" style="align-items:start">
+    <div class="card" id="weight">
+      <span class="tag">Calculator</span><h2 style="font-size:1.5rem">Fish weight estimator</h2>
+      <p>Measure length (nose to tail fork or tip) and girth (around the fattest part), then estimate weight before you release the fish.</p>
+      <div class="row2"><div class="field"><label for="w-len">Length</label><input id="w-len" type="number" min="1" step="0.1" value="20"></div><div class="field"><label for="w-gir">Girth</label><input id="w-gir" type="number" min="1" step="0.1" value="13"></div></div>
+      <div class="row2"><div class="field"><label for="w-unit">Units</label><select id="w-unit"><option value="in">inches</option><option value="cm">centimetres</option></select></div><div class="field"><label for="w-body">Formula</label><select id="w-body"><option value="800">Standard formula (÷ 800)</option></select></div></div>
+      <p class="calc-out" id="w-out">—</p><p class="muted" style="font-size:.88rem">Formula: length × girth² ÷ factor (in inches → lb). Estimates are typically within about 10–15%. Use certified scales for records.</p>
+    </div>
+    <div class="card" id="line">
+      <span class="tag">Calculator</span><h2 style="font-size:1.5rem">Reel line capacity</h2>
+      <p>Your reel is rated for one line (e.g. "150 yd of 0.30 mm"). Work out how much of a different line it will hold.</p>
+      <div class="row2"><div class="field"><label for="l-yd">Rated capacity (yd or m)</label><input id="l-yd" type="number" value="150"></div><div class="field"><label for="l-d1">Rated diameter (mm)</label><input id="l-d1" type="number" step="0.01" value="0.30"></div></div>
+      <div class="field"><label for="l-d2">New line diameter (mm)</label><input id="l-d2" type="number" step="0.01" value="0.23"></div>
+      <p class="calc-out" id="l-out">—</p><p class="muted" style="font-size:.88rem">Capacity scales with the inverse square of diameter. Check the package for the true diameter, because "lb test" alone varies by brand.</p>
+    </div>
+    <div class="card" id="convert">
+      <span class="tag">Converter</span><h2 style="font-size:1.5rem">Fishing unit converter</h2>
+      <div class="row2"><div class="field"><label for="c-val">Value</label><input id="c-val" type="number" value="10"></div><div class="field"><label for="c-type">Convert</label><select id="c-type">
+        <option value="lbkg">pounds → kilograms</option><option value="kglb">kilograms → pounds</option><option value="incm">inches → centimetres</option><option value="cmin">centimetres → inches</option><option value="ftm">feet → metres</option><option value="mft">metres → feet</option><option value="fc">°F → °C</option><option value="cf">°C → °F</option><option value="ktmph">knots → mph</option><option value="kmhkt">km/h → knots</option><option value="hpainhg">hPa → inHg</option><option value="fathm">fathoms → metres</option></select></div></div>
+      <p class="calc-out" id="c-out">—</p>
+    </div>
+    <div class="card" id="checklist">
+      <span class="tag">Planner</span><h2 style="font-size:1.5rem">Trip checklist</h2>
+      <div class="field"><label for="t-type">Trip type</label><select id="t-type"><option value="shore">Shore / bank</option><option value="boat">Boat / kayak</option><option value="surf">Surf</option><option value="ice">Ice</option><option value="fly">Fly / wading</option></select></div>
+      <ul id="t-list" style="list-style:none;padding:0;columns:2;font-size:.95rem"></ul>
+      <button class="btn btn-outline btn-sm no-print" type="button" onclick="window.print()">Print checklist</button>
+    </div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container narrow">
+    <h2>More planning tools</h2>
+    <ul><li><a href="forecast.html">7-day bite forecast</a>: hourly score, solunar periods, pressure and wind.</li><li><a href="solunar-calendar.html">Solunar calendar</a>: the best days of the month, printable.</li><li><a href="knots.html">Knot chooser</a>: the right knot for every connection.</li><li><a href="regulations.html">Licences &amp; regulations</a>: official sources by region.</li></ul>
+  </div>
+</section>
+<script>
+(function(){
+  function $(i){return document.getElementById(i);}
+  function weight(){var L=+$('w-len').value,G=+$('w-gir').value,f=+$('w-body').value;if($('w-unit').value==='cm'){L/=2.54;G/=2.54;}
+    if(!(L>0&&G>0)){$('w-out').textContent='—';return;}var lb=L*G*G/f;$('w-out').textContent='≈ '+lb.toFixed(1)+' lb  ('+(lb*0.4536).toFixed(2)+' kg)';}
+  function line(){var c=+$('l-yd').value,a=+$('l-d1').value,b=+$('l-d2').value;$('l-out').textContent=(c>0&&a>0&&b>0)?'≈ '+Math.round(c*(a*a)/(b*b))+' (same unit)':'—';}
+  var conv={lbkg:[function(v){return v*0.45359237},'kg'],kglb:[function(v){return v/0.45359237},'lb'],incm:[function(v){return v*2.54},'cm'],cmin:[function(v){return v/2.54},'in'],ftm:[function(v){return v*0.3048},'m'],mft:[function(v){return v/0.3048},'ft'],fc:[function(v){return (v-32)*5/9},'°C'],cf:[function(v){return v*9/5+32},'°F'],ktmph:[function(v){return v*1.15078},'mph'],kmhkt:[function(v){return v/1.852},'kn'],hpainhg:[function(v){return v*0.02953},'inHg'],fathm:[function(v){return v*1.8288},'m']};
+  function convert(){var v=+$('c-val').value,c=conv[$('c-type').value];$('c-out').textContent=isFinite(v)?(Math.round(c[0](v)*100)/100)+' '+c[1]:'—';}
+  var base=['Fishing licence (photo or app)','Rod, reel & spare line','Hooks, weights, swivels','Pliers & line cutter','Sunscreen, hat, polarised glasses','Water & snacks','First-aid kit','Phone in waterproof case','Bag or measuring tape for releases','Check the bite forecast'];
+  var extra={shore:['Rod holder or sand spike','Folding chair','Bait bucket / cooler'],boat:['Life jackets for everyone','Registration & safety gear','Anchor & rope','Marine forecast checked','Fuel & spare plug'],surf:['Sand spike','Waders or wet-wade shoes','Pyramid / sputnik sinkers','Tide table checked','Headlamp'],ice:['Ice picks worn around neck','Spud bar / ice chisel','Auger','Ice cleats','Shelter / warm layers','Local ice report checked','Throw rope'],fly:['Waders & wading boots','Wading staff','Fly box & tippet','Floatant','Net','River level checked']};
+  function list(){var t=$('t-type').value;$('t-list').innerHTML=base.concat(extra[t]).map(function(x,i){return '<li style="break-inside:avoid;margin-bottom:6px"><label class="check" style="color:var(--text)"><input type="checkbox"> '+x+'</label></li>';}).join('');}
+  ['w-len','w-gir','w-unit','w-body'].forEach(function(i){$(i).addEventListener('input',weight);});
+  ['l-yd','l-d1','l-d2'].forEach(function(i){$(i).addEventListener('input',line);});
+  ['c-val','c-type'].forEach(function(i){$(i).addEventListener('input',convert);});
+  $('t-type').addEventListener('change',list);
+  weight();line();convert();list();
+})();
+</script>
