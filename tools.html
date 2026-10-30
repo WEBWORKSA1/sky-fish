@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Angler Tools — Fish Weight Calculator, Line Capacity &amp; Converters | Sky.Fish</title>
+<meta name="description" content="Free angler tools: estimate fish weight from length and girth, calculate reel line capacity for a new line, convert fishing units and build a trip checklist.">
+<link rel="canonical" href="https://sky.fish/tools.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0a1726">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sky.Fish">
+<meta property="og:title" content="Angler Tools — Fish Weight Calculator, Line Capacity &amp; Converters | Sky.Fish">
+<meta property="og:description" content="Free angler tools: estimate fish weight from length and girth, calculate reel line capacity for a new line, convert fishing units and build a trip checklist.">
+<meta property="og:url" content="https://sky.fish/tools.html">
+<meta property="og:image" content="https://sky.fish/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="google-adsense-account" content="ca-pub-6620975821265271">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar" role="note"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership</a></div>
+<header class="site-header">
+<nav class="container nav" aria-label="Main">
+<a class="brand" href="index.html" aria-label="Sky.Fish home"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9b52"/><stop offset="1" stop-color="#12b5a6"/></linearGradient></defs><circle cx="20" cy="20" r="19" fill="url(#lg)"/><path d="M8 22c5-7 14-8 20-2l5-4-1 6 1 6-5-4c-6 6-15 5-20-2z" fill="#0a1726"/><circle cx="14" cy="21" r="1.4" fill="#fff"/><path d="M5 30c4 2 8 2 12 0s8-2 12 0 7 2 7 2" stroke="#fff" stroke-width="1.6" fill="none" opacity=".8"/></svg><span>Sky<span class="dot">.</span>Fish</span></a>
+<button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+<ul class="menu" id="menu"><li><a href="forecast.html">Forecast</a></li><li><a href="solunar-calendar.html">Solunar Calendar</a></li><li><a href="guides.html">Guides</a></li><li><a href="species.html">Species</a></li><li><a href="knots.html">Knots</a></li><li><a href="tools.html" aria-current="page">Tools</a></li><li><a href="videos.html">Videos</a></li><li><a href="support.html">Support</a></li><li class="nav-cta-m"><a href="charters.html" style="color:var(--gold)">Get Charter Quotes</a></li></ul>
+<a class="btn btn-sun btn-sm nav-cta" href="charters.html">Get Charter Quotes</a>
+</nav>
+</header>
+<main id="main"><section class="page-hero"><div class="container"><div class="crumbs"><a href="index.html">Home</a> / Angler Tools</div><h1>Angler Tools</h1><p>Quick calculators for the dock, the boat and the tackle bench. They all run in your browser and work offline once loaded.</p></div></section><section style="padding-top:36px">
+  <div class="container grid g2" style="align-items:start">
+    <div class="card" id="weight">
+      <span class="tag">Calculator</span><h2 style="font-size:1.5rem">Fish weight estimator</h2>
+      <p>Measure length (nose to tail fork or tip) and girth (around the fattest part), then estimate weight before you release the fish.</p>
+      <div class="row2"><div class="field"><label for="w-len">Length</label><input id="w-len" type="number" min="1" step="0.1" value="20"></div><div class="field"><label for="w-gir">Girth</label><input id="w-gir" type="number" min="1" step="0.1" value="13"></div></div>
+      <div class="row2"><div class="field"><label for="w-unit">Units</label><select id="w-unit"><option value="in">inches</option><option value="cm">centimetres</option></select></div><div class="field"><label for="w-body">Formula</label><select id="w-body"><option value="800">Standard formula (÷ 800)</option></select></div></div>
+      <p class="calc-out" id="w-out">—</p><p class="muted" style="font-size:.88rem">Formula: length × girth² ÷ factor (in inches → lb). Estimates are typically within about 10–15%. Use certified scales for records.</p>
+    </div>
+    <div class="card" id="line">
+      <span class="tag">Calculator</span><h2 style="font-size:1.5rem">Reel line capacity</h2>
+      <p>Your reel is rated for one line (e.g. "150 yd of 0.30 mm"). Work out how much of a different line it will hold.</p>
+      <div class="row2"><div class="field"><label for="l-yd">Rated capacity (yd or m)</label><input id="l-yd" type="number" value="150"></div><div class="field"><label for="l-d1">Rated diameter (mm)</label><input id="l-d1" type="number" step="0.01" value="0.30"></div></div>
+      <div class="field"><label for="l-d2">New line diameter (mm)</label><input id="l-d2" type="number" step="0.01" value="0.23"></div>
+      <p class="calc-out" id="l-out">—</p><p class="muted" style="font-size:.88rem">Capacity scales with the inverse square of diameter. Check the package for the true diameter, because "lb test" alone varies by brand.</p>
+    </div>
+    <div class="card" id="convert">
+      <span class="tag">Converter</span><h2 style="font-size:1.5rem">Fishing unit converter</h2>
+      <div class="row2"><div class="field"><label for="c-val">Value</label><input id="c-val" type="number" value="10"></div><div class="field"><label for="c-type">Convert</label><select id="c-type">
+        <option value="lbkg">pounds → kilograms</option><option value="kglb">kilograms → pounds</option><option value="incm">inches → centimetres</option><option value="cmin">centimetres → inches</option><option value="ftm">feet → metres</option><option value="mft">metres → feet</option><option value="fc">°F → °C</option><option value="cf">°C → °F</option><option value="ktmph">knots → mph</option><option value="kmhkt">km/h → knots</option><option value="hpainhg">hPa → inHg</option><option value="fathm">fathoms → metres</option></select></div></div>
+      <p class="calc-out" id="c-out">—</p>
+    </div>
+    <div class="card" id="checklist">
+      <span class="tag">Planner</span><h2 style="font-size:1.5rem">Trip checklist</h2>
+      <div class="field"><label for="t-type">Trip type</label><select id="t-type"><option value="shore">Shore / bank</option><option value="boat">Boat / kayak</option><option value="surf">Surf</option><option value="ice">Ice</option><option value="fly">Fly / wading</option></select></div>
+      <ul id="t-list" style="list-style:none;padding:0;columns:2;font-size:.95rem"></ul>
+      <button class="btn btn-outline btn-sm no-print" type="button" onclick="window.print()">Print checklist</button>
+    </div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container narrow">
+    <h2>More planning tools</h2>
+    <ul><li><a href="forecast.html">7-day bite forecast</a>: hourly score, solunar periods, pressure and wind.</li><li><a href="solunar-calendar.html">Solunar calendar</a>: the best days of the month, printable.</li><li><a href="knots.html">Knot chooser</a>: the right knot for every connection.</li><li><a href="regulations.html">Licences &amp; regulations</a>: official sources by region.</li></ul>
+  </div>
+</section>
+<script>
+(function(){
+  function $(i){return document.getElementById(i);}
+  function weight(){var L=+$('w-len').value,G=+$('w-gir').value,f=+$('w-body').value;if($('w-unit').value==='cm'){L/=2.54;G/=2.54;}
+    if(!(L>0&&G>0)){$('w-out').textContent='—';return;}var lb=L*G*G/f;$('w-out').textContent='≈ '+lb.toFixed(1)+' lb  ('+(lb*0.4536).toFixed(2)+' kg)';}
+  function line(){var c=+$('l-yd').value,a=+$('l-d1').value,b=+$('l-d2').value;$('l-out').textContent=(c>0&&a>0&&b>0)?'≈ '+Math.round(c*(a*a)/(b*b))+' (same unit)':'—';}
+  var conv={lbkg:[function(v){return v*0.45359237},'kg'],kglb:[function(v){return v/0.45359237},'lb'],incm:[function(v){return v*2.54},'cm'],cmin:[function(v){return v/2.54},'in'],ftm:[function(v){return v*0.3048},'m'],mft:[function(v){return v/0.3048},'ft'],fc:[function(v){return (v-32)*5/9},'°C'],cf:[function(v){return v*9/5+32},'°F'],ktmph:[function(v){return v*1.15078},'mph'],kmhkt:[function(v){return v/1.852},'kn'],hpainhg:[function(v){return v*0.02953},'inHg'],fathm:[function(v){return v*1.8288},'m']};
+  function convert(){var v=+$('c-val').value,c=conv[$('c-type').value];$('c-out').textContent=isFinite(v)?(Math.round(c[0](v)*100)/100)+' '+c[1]:'—';}
+  var base=['Fishing licence (photo or app)','Rod, reel & spare line','Hooks, weights, swivels','Pliers & line cutter','Sunscreen, hat, polarised glasses','Water & snacks','First-aid kit','Phone in waterproof case','Bag or measuring tape for releases','Check the bite forecast'];
+  var extra={shore:['Rod holder or sand spike','Folding chair','Bait bucket / cooler'],boat:['Life jackets for everyone','Registration & safety gear','Anchor & rope','Marine forecast checked','Fuel & spare plug'],surf:['Sand spike','Waders or wet-wade shoes','Pyramid / sputnik sinkers','Tide table checked','Headlamp'],ice:['Ice picks worn around neck','Spud bar / ice chisel','Auger','Ice cleats','Shelter / warm layers','Local ice report checked','Throw rope'],fly:['Waders & wading boots','Wading staff','Fly box & tippet','Floatant','Net','River level checked']};
+  function list(){var t=$('t-type').value;$('t-list').innerHTML=base.concat(extra[t]).map(function(x,i){return '<li style="break-inside:avoid;margin-bottom:6px"><label class="check" style="color:var(--text)"><input type="checkbox"> '+x+'</label></li>';}).join('');}
+  ['w-len','w-gir','w-unit','w-body'].forEach(function(i){$(i).addEventListener('input',weight);});
+  ['l-yd','l-d1','l-d2'].forEach(function(i){$(i).addEventListener('input',line);});
+  ['c-val','c-type'].forEach(function(i){$(i).addEventListener('input',convert);});
+  $('t-type').addEventListener('change',list);
+  weight();line();convert();list();
+})();
+</script>
+</main><footer class="site-footer">
+<div class="container">
+<div class="foot-grid">
+<div>
+<a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9b52"/><stop offset="1" stop-color="#12b5a6"/></linearGradient></defs><circle cx="20" cy="20" r="19" fill="url(#lg)"/><path d="M8 22c5-7 14-8 20-2l5-4-1 6 1 6-5-4c-6 6-15 5-20-2z" fill="#0a1726"/><circle cx="14" cy="21" r="1.4" fill="#fff"/><path d="M5 30c4 2 8 2 12 0s8-2 12 0 7 2 7 2" stroke="#fff" stroke-width="1.6" fill="none" opacity=".8"/></svg><span>Sky<span class="dot">.</span>Fish</span></a>
+<p class="mt2">Read the sky, find the bite. Free fishing forecasts, solunar tables, species guides and local pros — built for anglers everywhere.</p>
+<a class="btn btn-sun btn-sm" href="charters.html">Get free charter quotes</a>
+</div>
+<div><h4>Forecast</h4><ul>
+<li><a href="forecast.html">7-Day Bite Forecast</a></li><li><a href="solunar-calendar.html">Solunar Calendar</a></li>
+<li><a href="tools.html">Angler Tools</a></li><li><a href="regulations.html">Licences &amp; Regulations</a></li>
+<li><a href="guides/moon-phases-solunar-fishing.html">How Solunar Works</a></li></ul></div>
+<div><h4>Learn</h4><ul>
+<li><a href="guides.html">All Guides</a></li><li><a href="species.html">Species Library</a></li>
+<li><a href="knots.html">Knot Library</a></li><li><a href="videos.html">Video Lessons</a></li>
+<li><a href="guides/beginners-guide-to-fishing.html">Beginner's Guide</a></li></ul></div>
+<div><h4>Community</h4><ul>
+<li><a href="contests.html">Catch of the Month</a></li><li><a href="support.html">Support Sky.Fish</a></li>
+<li><a href="list-your-business.html">List Your Charter</a></li><li><a href="careers.html">Careers &amp; Creators</a></li>
+<li><a href="advertise.html">Advertise &amp; Sponsor</a></li></ul></div>
+<div><h4>Company</h4><ul>
+<li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+<li><a href="privacy.html">Privacy &amp; Cookies</a></li><li><a href="terms.html">Terms of Use</a></li>
+<li><a href="disclaimer.html">Disclaimer</a></li><li><a href="legal.html">Trademark &amp; Copyright</a></li></ul></div>
+</div>
+<div class="foot-legal">
+<p>&copy; <span data-year>2026</span> Sky.Fish. All rights reserved. Original content, forecasts and design are protected by copyright. Sky.Fish is an independent publication and is not affiliated with, endorsed by or connected to any company, app, product or trademark using the name "Skyfish" or similar marks. <a href="legal.html">Trademark &amp; copyright disclosure</a>.</p>
+<p>Forecasts are estimates for planning only — always check official weather, marine and safety advisories. Weather data by <a href="https://open-meteo.com/" rel="noopener" target="_blank">Open-Meteo.com</a> (CC BY 4.0). Videos are embedded from YouTube and remain the property of their creators.</p>
+<p>Interested in this website, the domain name, sponsorship, advertising or partnership? <a href="https://web.works/contact" target="_blank" rel="noopener">Contact us here</a>.</p>
+</div>
+</div>
+</footer>
+<div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Cookie notice">
+<strong>Cookies &amp; ads.</strong> We use cookies to remember your forecast location and, with Google AdSense, to show and measure ads. Some ads may be personalised. <a href="privacy.html#cookies">Learn more</a>.
+<div class="btns"><button class="btn btn-sun btn-sm" data-cookie="all">Accept</button><button class="btn btn-ghost btn-sm" data-cookie="essential">Essential only</button></div>
+</div>
+<script src="assets/js/config.js"></script><script src="assets/js/app.js"></script>
+</body>
+</html>
