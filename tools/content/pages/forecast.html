@@ -1,0 +1,26 @@
+<!--meta {"title":"7-Day Fishing Forecast & Hourly Bite Score","description":"Free 7-day fishing forecast for any location: hourly bite score, solunar major and minor periods, moon phase, barometric pressure trend, wind and cloud cover.","path":"forecast.html","nav":"forecast","hero":"page","h1":"7-Day Fishing Forecast","sub":"Search any town, lake, river or harbour. We calculate sun and moon events for those exact coordinates, pull in live hourly weather, and score every hour of the next seven days.","scripts":["astro.js","forecast.js"]} -->
+<section style="padding-top:36px">
+  <div class="container" data-fc="full">
+    <div class="card no-print" style="margin-bottom:22px">
+      <div class="row2" style="align-items:end">
+        <div class="field mb0" style="margin-bottom:0"><label for="locFull">Location</label>
+          <div class="fc-search"><input id="locFull" data-loc-input type="search" placeholder="Search town, lake or harbour" autocomplete="off"><ul class="fc-suggest" data-loc-list role="listbox"></ul></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><button class="btn btn-tide" type="button" data-loc-geo>Use my location</button><span class="muted">Showing: <strong data-loc-name>—</strong></span></div>
+      </div>
+    </div>
+    <div data-fc-out aria-live="polite"><p class="muted">Loading forecast…</p></div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="container narrow">
+    <h2>How to read your fishing forecast</h2>
+    <p>The <strong>bite score</strong> (0–100) estimates how active fish are likely to be in each hour. <strong>Excellent</strong> (75+) hours usually line up with a solunar major period near dawn or dusk under favourable weather. <strong>Slow</strong> hours (under 45) are worth fishing, but slow down, scale down and fish tight to cover.</p>
+    <h3>Major and minor periods</h3>
+    <p>Major periods last about two hours and are centred on the moon passing directly overhead or underfoot. Minor periods last about an hour and are centred on moonrise and moonset. When a period overlaps sunrise or sunset, expect the strongest window of the day. Read the full explanation in <a href="guides/moon-phases-solunar-fishing.html">Moon Phases &amp; Solunar Theory</a>.</p>
+    <h3>Pressure, wind and clouds</h3>
+    <p>We compare air pressure with three hours earlier. A slow fall (1–4 hPa) ahead of a front earns points, a steady barometer is neutral to good, and a sharp rise after a front costs points. Wind of 5–20 km/h breaks up the surface and helps. Gales hurt the score and your safety. See <a href="guides/barometric-pressure-fishing.html">our pressure guide</a> and <a href="guides/weather-wind-clouds-fishing.html">reading the sky</a>.</p>
+    <div class="notice"><strong>Safety first:</strong> the forecast is for planning. Always check official marine forecasts, small-craft advisories, river levels and ice reports before you go.</div>
+  </div>
+</section>
