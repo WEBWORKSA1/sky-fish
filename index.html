@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sky.Fish — Fishing Forecast, Solunar Times &amp; Bite Score</title>
+<meta name="description" content="Free fishing forecast for any lake, river or coast: hourly bite score from moon, sun, barometric pressure and wind, plus guides, knots and local charter quotes.">
+<link rel="canonical" href="https://sky.fish/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0a1726">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sky.Fish">
+<meta property="og:title" content="Sky.Fish — Fishing Forecast, Solunar Times &amp; Bite Score">
+<meta property="og:description" content="Free fishing forecast for any lake, river or coast: hourly bite score from moon, sun, barometric pressure and wind, plus guides, knots and local charter quotes.">
+<meta property="og:url" content="https://sky.fish/">
+<meta property="og:image" content="https://sky.fish/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="google-adsense-account" content="ca-pub-6620975821265271">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Sky.Fish", "url": "https://sky.fish/", "description": "Fishing forecasts, solunar tables, guides and local charter quotes."}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar" role="note"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership</a></div>
+<header class="site-header">
+<nav class="container nav" aria-label="Main">
+<a class="brand" href="index.html" aria-label="Sky.Fish home"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9b52"/><stop offset="1" stop-color="#12b5a6"/></linearGradient></defs><circle cx="20" cy="20" r="19" fill="url(#lg)"/><path d="M8 22c5-7 14-8 20-2l5-4-1 6 1 6-5-4c-6 6-15 5-20-2z" fill="#0a1726"/><circle cx="14" cy="21" r="1.4" fill="#fff"/><path d="M5 30c4 2 8 2 12 0s8-2 12 0 7 2 7 2" stroke="#fff" stroke-width="1.6" fill="none" opacity=".8"/></svg><span>Sky<span class="dot">.</span>Fish</span></a>
+<button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+<ul class="menu" id="menu"><li><a href="forecast.html">Forecast</a></li><li><a href="solunar-calendar.html">Solunar Calendar</a></li><li><a href="guides.html">Guides</a></li><li><a href="species.html">Species</a></li><li><a href="knots.html">Knots</a></li><li><a href="tools.html">Tools</a></li><li><a href="videos.html">Videos</a></li><li><a href="support.html">Support</a></li><li class="nav-cta-m"><a href="charters.html" style="color:var(--gold)">Get Charter Quotes</a></li></ul>
+<a class="btn btn-sun btn-sm nav-cta" href="charters.html">Get Charter Quotes</a>
+</nav>
+</header>
+<main id="main"><section class="hero">
+  <div class="stars"></div><div class="moon" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Free fishing forecast · any water, anywhere</span>
+      <h1>Read the sky. Find the bite.</h1>
+      <p class="sub">Sky.Fish turns the moon, sun, barometric pressure, wind and clouds into one hourly <strong>bite score</strong> — so you know exactly when to be on the water.</p>
+      <div class="hero-actions">
+        <a class="btn btn-sun" href="forecast.html">Check my 7-day forecast</a>
+        <a class="btn btn-ghost" href="charters.html">Book a local guide</a>
+      </div>
+      <div class="trust"><span>100% free, no app needed</span><span>Lakes, rivers, surf &amp; offshore</span><span>Updated every hour</span></div>
+    </div>
+    <div class="fc-card" data-fc="widget">
+      <label for="locHome">Where are you fishing?</label>
+      <div class="fc-search">
+        <input id="locHome" data-loc-input type="search" placeholder="Town, lake or harbour" autocomplete="off">
+        <button class="btn btn-tide btn-sm" data-loc-geo type="button">Use my location</button>
+        <ul class="fc-suggest" data-loc-list role="listbox"></ul>
+      </div>
+      <div data-fc-out><p class="muted">Loading today's bite…</p></div>
+    </div>
+  </div>
+  <svg class="jump" viewBox="0 0 80 40" aria-hidden="true"><path d="M4 20c10-12 30-14 46-4l14-10-3 14 3 14-14-10C34 34 14 32 4 20z" fill="#ffcf5a"/></svg>
+  <div class="waves" aria-hidden="true">
+    <svg viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60c240 40 480 40 720 0s480-40 720 0 480 40 720 0 480-40 720 0v60H0z" fill="#12b5a6" opacity=".35"/></svg>
+    <svg class="w2" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 80c240-30 480-30 720 0s480 30 720 0 480-30 720 0 480 30 720 0v40H0z" fill="#f3f7fa"/></svg>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">How the bite score works</span><h2>Four signals. One number you can trust.</h2></div><p>Fish feed in rhythms. We model the ones anglers have relied on for generations and score every hour from 0 to 100.</p></div>
+    <div class="grid g4">
+      <div class="card reveal"><div class="icon">🌙</div><h3>Solunar periods</h3><p>Major windows when the moon is overhead or underfoot, minor windows at moonrise and moonset.</p><a href="guides/moon-phases-solunar-fishing.html">How solunar works →</a></div>
+      <div class="card reveal"><div class="icon">🌅</div><h3>Dawn &amp; dusk</h3><p>Low light pushes baitfish shallow and predators follow. Sunrise and sunset windows get a boost.</p><a href="guides/weather-wind-clouds-fishing.html">Light &amp; weather →</a></div>
+      <div class="card reveal"><div class="icon">📉</div><h3>Pressure trend</h3><p>A slowly falling barometer before a front often triggers feeding; a sharp post-front rise shuts it down.</p><a href="guides/barometric-pressure-fishing.html">Pressure guide →</a></div>
+      <div class="card reveal"><div class="icon">💨</div><h3>Wind &amp; cloud</h3><p>A light chop and broken cloud make fish bolder. Gales and bluebird skies cost points.</p><a href="forecast.html">See today's factors →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="container">
+    <div class="lead-band reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--gold)">Free quotes from local pros</span>
+        <h2>Skip the guesswork. Fish with someone who's on them every day.</h2>
+        <p>Tell us where and when. We put your request in front of licensed fishing guides and charter captains in that area, and they come back to you with availability and prices.</p>
+        <ul><li>One short form instead of calling ten captains</li><li>Inshore, offshore, lake, river, fly and ice trips</li><li>No booking fees and no obligation</li></ul>
+      </div>
+      <form class="form-card" action="charters.html" method="get" style="color:var(--text)">
+        <h3>Start your trip request</h3>
+        <div class="field"><label for="hq-loc">Where do you want to fish?</label><input id="hq-loc" name="loc" required placeholder="e.g. Key West, Lake Erie, Cairns"></div>
+        <div class="row2"><div class="field"><label for="hq-date">Date</label><input id="hq-date" name="date" type="date"></div>
+        <div class="field"><label for="hq-g">Anglers</label><select id="hq-g" name="group"><option>1–2</option><option selected>3–4</option><option>5–6</option><option>7+</option></select></div></div>
+        <button class="btn btn-sun btn-block" type="submit">Continue — takes about 60 seconds</button>
+        <p class="secure">🔒 We never sell your details. <a href="privacy.html">Privacy</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Learn</span><h2>Guides written by anglers, for anglers</h2></div><a class="btn btn-outline btn-sm" href="guides.html">All 14 guides</a></div>
+    <div class="grid g3"><article class="card reveal" data-cat="Forecast Science"><span class="tag">Forecast Science</span><h3><a class="stretched" href="guides/barometric-pressure-fishing.html">Barometric Pressure and Fishing: A Practical Guide</a></h3><p>How falling, stable and rising barometric pressure, cold fronts and post-frontal days change fish behaviour, plus a simple table of tactics for each trend.</p><small class="muted">8 min read</small></article><article class="card reveal" data-cat="Getting Started"><span class="tag">Getting Started</span><h3><a class="stretched" href="guides/beginners-guide-to-fishing.html">The Complete Beginner's Guide to Fishing</a></h3><p>Everything you need to start fishing: the right starter gear, getting a licence, where to go, three simple rigs, essential knots and a first-trip checklist.</p><small class="muted">9 min read</small></article><article class="card reveal" data-cat="Techniques"><span class="tag">Techniques</span><h3><a class="stretched" href="guides/catch-and-release.html">Catch and Release Done Right: Handling Fish So They Survive</a></h3><p>How to release fish that live to bite again: hook choice, short fights, wet-hand handling, limiting air time, reviving properly, and dealing with deep fish.</p><small class="muted">7 min read</small></article><article class="card reveal" data-cat="Species"><span class="tag">Species</span><h3><a class="stretched" href="guides/catfish-fishing.html">Catfish Fishing: Channel, Blue & Flathead Tactics</a></h3><p>How to catch channel, blue and flathead catfish: where each species lives, the best baits, proven rigs like the Santee Cooper, and timing by season and night.</p><small class="muted">7 min read</small></article><article class="card reveal" data-cat="Getting Started"><span class="tag">Getting Started</span><h3><a class="stretched" href="guides/fishing-line-guide.html">Monofilament vs Fluorocarbon vs Braid: Choosing Fishing Line</a></h3><p>Mono, fluorocarbon or braid? Compare stretch, visibility, sink rate, abrasion resistance and knots, and learn which line suits each technique and species.</p><small class="muted">7 min read</small></article><article class="card reveal" data-cat="Getting Started"><span class="tag">Getting Started</span><h3><a class="stretched" href="guides/fly-fishing-for-beginners.html">Fly Fishing for Beginners: Gear, Casting & First Flies</a></h3><p>A practical start to fly fishing: choosing a first rod, line and leader, learning the overhead and roll cast, and picking a short list of flies that work.</p><small class="muted">7 min read</small></article></div>
+  </div>
+</section>
+
+<section class="bg-ink">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Species library</span><h2>What are you chasing?</h2></div><p style="color:#9fb3c6">Habitat, seasons, peak times and the baits that work — for the fish anglers ask about most.</p></div>
+    <div class="pill-row">
+      <a class="pill" href="species.html#largemouth-bass">Largemouth Bass</a><a class="pill" href="species.html#smallmouth-bass">Smallmouth Bass</a><a class="pill" href="species.html#rainbow-trout">Rainbow Trout</a><a class="pill" href="species.html#walleye">Walleye</a><a class="pill" href="species.html#northern-pike">Northern Pike</a><a class="pill" href="species.html#crappie">Crappie</a><a class="pill" href="species.html#channel-catfish">Catfish</a><a class="pill" href="species.html#redfish">Redfish</a><a class="pill" href="species.html#snook">Snook</a><a class="pill" href="species.html#striped-bass">Striped Bass</a><a class="pill" href="species.html#mahi-mahi">Mahi-Mahi</a><a class="pill" href="species.html#yellowfin-tuna">Yellowfin Tuna</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Watch &amp; learn</span><h2>Video lessons</h2></div><a class="btn btn-outline btn-sm" href="videos.html">Video library</a></div>
+    <div class="grid g3">
+      <div class="vid-card reveal"><div class="vid" data-yt="rhhBPNUXYis" data-title="Beginners' Guide to Fishing Gear"></div><h3>Beginners' guide to fishing gear</h3><p>Fishing with Nat</p></div>
+      <div class="vid-card reveal"><div class="vid" data-yt="uWw_f7CQQLg" data-title="How to Tie the Palomar Knot"></div><h3>How to tie the Palomar knot</h3><p>Wired2Fish</p></div>
+      <div class="vid-card reveal"><div class="vid" data-yt="20NtZKOi8Fo" data-title="Reading the Surf like a Pro"></div><h3>Reading the surf like a pro</h3><p>Hook2Cook</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Free angler tools</span><h2>Everything for trip day</h2></div></div>
+    <div class="grid g4">
+      <div class="card reveal"><div class="icon">📅</div><h3><a class="stretched" href="solunar-calendar.html">Solunar calendar</a></h3><p>Month view of best days, moon phases and major times. Printable.</p></div>
+      <div class="card reveal"><div class="icon">⚖️</div><h3><a class="stretched" href="tools.html">Fish weight calculator</a></h3><p>Estimate weight from length and girth before you release.</p></div>
+      <div class="card reveal"><div class="icon">🪢</div><h3><a class="stretched" href="knots.html">Knot library</a></h3><p>Step-by-step knots with a "which knot do I need?" chooser.</p></div>
+      <div class="card reveal"><div class="icon">📜</div><h3><a class="stretched" href="regulations.html">Licences &amp; rules</a></h3><p>Where to buy a licence and find official regulations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container grid g2" style="align-items:center">
+    <div class="reveal">
+      <span class="eyebrow">Catch of the Month</span>
+      <h2>Show off your catch. Win gear.</h2>
+      <p>Enter your best photo in one of four categories. A judging panel picks a winner in each every month, and monthly winners go forward to Angler of the Year.</p>
+      <p><strong>This month's entries close in <span data-countdown="month-end">—</span></strong></p>
+      <a class="btn btn-sun" href="contests.html#enter">Enter the contest</a> <a class="btn btn-outline" href="contests.html">Rules &amp; prizes</a>
+    </div>
+    <div class="grid g2 reveal">
+      <div class="card"><h3>🏆 Biggest catch</h3><p>Measured length on a board or tape.</p></div>
+      <div class="card"><h3>📸 Best photo</h3><p>Light, composition, story.</p></div>
+      <div class="card"><h3>🧒 Young angler</h3><p>Under 16, entered by a parent or guardian.</p></div>
+      <div class="card"><h3>🌿 Release hero</h3><p>Best catch-and-release shot.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-ink">
+  <div class="container grid g2" style="align-items:center">
+    <div>
+      <span class="eyebrow">Keep Sky.Fish free</span>
+      <h2>Support the forecast every angler can use</h2>
+      <p>Supporters pay for servers and data, the monthly prizes, the writers and guides we hire, and getting the word out. Every contribution goes to one of these four areas.</p>
+      <a class="btn btn-sun" href="support.html">Become a supporter</a> <a class="btn btn-ghost" href="advertise.html">Sponsor a prize</a>
+    </div>
+    <div class="card" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)">
+      <h3>Where support goes</h3>
+      <p style="color:#c7d6e4" class="mb0">Operations, hosting &amp; data — 40%</p><div class="meter"><i style="width:40%"></i></div>
+      <p style="color:#c7d6e4" class="mt2 mb0">Hiring writers, guides &amp; video creators — 25%</p><div class="meter"><i style="width:25%"></i></div>
+      <p style="color:#c7d6e4" class="mt2 mb0">Contests &amp; prizes — 20%</p><div class="meter"><i style="width:20%"></i></div>
+      <p style="color:#c7d6e4" class="mt2 mb0">Promotion &amp; marketing — 15%</p><div class="meter"><i style="width:15%"></i></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container grid g2">
+    <div class="card reveal"><span class="tag sun">For captains &amp; guides</span><h3>Get trip requests from anglers in your area</h3><p>List your charter or guide service and receive quote requests from anglers who have already picked their dates. Listing is free while we launch.</p><a class="btn btn-sun" href="list-your-business.html">List your business</a></div>
+    <div class="card reveal"><span class="tag">Join the crew</span><h3>Write, film or guide with Sky.Fish</h3><p>We're hiring freelance writers, regional reporters, video creators and brand ambassadors who know their water.</p><a class="btn btn-outline" href="careers.html">See open roles</a></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="newsletter reveal">
+      <div><h2>The Weekend Bite</h2><p class="mb0">One short email each Thursday: the best weekend windows, a new technique and the contest winners.</p></div>
+      <form data-sf-form="Newsletter signup" data-ok="You're in! Watch for The Weekend Bite on Thursday.">
+        <label class="sr-only" for="nl-email">Email</label>
+        <input id="nl-email" name="email" type="email" required placeholder="you@example.com">
+        <input class="hp" name="_honey" tabindex="-1" autocomplete="off">
+        <button class="btn" type="submit">Subscribe</button>
+        <div class="form-msg" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="container narrow faq">
+    <h2 class="center">Frequently asked questions</h2>
+    <details><summary>Is the Sky.Fish forecast really free?</summary><p>Yes. There's no account, app or paywall. Advertising and supporter contributions pay for the site.</p></details>
+    <details><summary>How accurate is the bite score?</summary><p>It's a planning tool, not a promise. The score combines solunar timing, light, moon phase and live weather (pressure trend, wind, cloud, rain chance) into a 0–100 estimate. Water temperature, current, structure and fishing pressure still matter, so use the score to pick your windows and your own knowledge to pick your spots.</p></details>
+    <details><summary>Where does the weather data come from?</summary><p>Hourly weather comes from the open Open-Meteo forecast API. Sun and moon positions are calculated in your browser for the exact coordinates you choose.</p></details>
+    <details><summary>Does it work for saltwater?</summary><p>Yes, the sky and weather factors apply everywhere. On the coast, tides often matter as much as the moon, so check official tide tables (for example NOAA in the US) alongside your score.</p></details>
+    <details><summary>How do charter quotes work?</summary><p>You send one request with your dates, group size and trip type. We pass it to suitable local operators, and they contact you directly with availability and prices. You book with them only if you want to.</p></details>
+  </div>
+</section>
+</main><footer class="site-footer">
+<div class="container">
+<div class="foot-grid">
+<div>
+<a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9b52"/><stop offset="1" stop-color="#12b5a6"/></linearGradient></defs><circle cx="20" cy="20" r="19" fill="url(#lg)"/><path d="M8 22c5-7 14-8 20-2l5-4-1 6 1 6-5-4c-6 6-15 5-20-2z" fill="#0a1726"/><circle cx="14" cy="21" r="1.4" fill="#fff"/><path d="M5 30c4 2 8 2 12 0s8-2 12 0 7 2 7 2" stroke="#fff" stroke-width="1.6" fill="none" opacity=".8"/></svg><span>Sky<span class="dot">.</span>Fish</span></a>
+<p class="mt2">Read the sky, find the bite. Free fishing forecasts, solunar tables, species guides and local pros — built for anglers everywhere.</p>
+<a class="btn btn-sun btn-sm" href="charters.html">Get free charter quotes</a>
+</div>
+<div><h4>Forecast</h4><ul>
+<li><a href="forecast.html">7-Day Bite Forecast</a></li><li><a href="solunar-calendar.html">Solunar Calendar</a></li>
+<li><a href="tools.html">Angler Tools</a></li><li><a href="regulations.html">Licences &amp; Regulations</a></li>
+<li><a href="guides/moon-phases-solunar-fishing.html">How Solunar Works</a></li></ul></div>
+<div><h4>Learn</h4><ul>
+<li><a href="guides.html">All Guides</a></li><li><a href="species.html">Species Library</a></li>
+<li><a href="knots.html">Knot Library</a></li><li><a href="videos.html">Video Lessons</a></li>
+<li><a href="guides/beginners-guide-to-fishing.html">Beginner's Guide</a></li></ul></div>
+<div><h4>Community</h4><ul>
+<li><a href="contests.html">Catch of the Month</a></li><li><a href="support.html">Support Sky.Fish</a></li>
+<li><a href="list-your-business.html">List Your Charter</a></li><li><a href="careers.html">Careers &amp; Creators</a></li>
+<li><a href="advertise.html">Advertise &amp; Sponsor</a></li></ul></div>
+<div><h4>Company</h4><ul>
+<li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+<li><a href="privacy.html">Privacy &amp; Cookies</a></li><li><a href="terms.html">Terms of Use</a></li>
+<li><a href="disclaimer.html">Disclaimer</a></li><li><a href="legal.html">Trademark &amp; Copyright</a></li></ul></div>
+</div>
+<div class="foot-legal">
+<p>&copy; <span data-year>2026</span> Sky.Fish. All rights reserved. Original content, forecasts and design are protected by copyright. Sky.Fish is an independent publication and is not affiliated with, endorsed by or connected to any company, app, product or trademark using the name "Skyfish" or similar marks. <a href="legal.html">Trademark &amp; copyright disclosure</a>.</p>
+<p>Forecasts are estimates for planning only — always check official weather, marine and safety advisories. Weather data by <a href="https://open-meteo.com/" rel="noopener" target="_blank">Open-Meteo.com</a> (CC BY 4.0). Videos are embedded from YouTube and remain the property of their creators.</p>
+<p>Interested in this website, the domain name, sponsorship, advertising or partnership? <a href="https://web.works/contact" target="_blank" rel="noopener">Contact us here</a>.</p>
+</div>
+</div>
+</footer>
+<div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Cookie notice">
+<strong>Cookies &amp; ads.</strong> We use cookies to remember your forecast location and, with Google AdSense, to show and measure ads. Some ads may be personalised. <a href="privacy.html#cookies">Learn more</a>.
+<div class="btns"><button class="btn btn-sun btn-sm" data-cookie="all">Accept</button><button class="btn btn-ghost btn-sm" data-cookie="essential">Essential only</button></div>
+</div>
+<script src="assets/js/config.js"></script><script src="assets/js/astro.js"></script><script src="assets/js/forecast.js"></script><script src="assets/js/app.js"></script>
+</body>
+</html>

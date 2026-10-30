@@ -1,0 +1,26 @@
+<!--meta {"title":"Solunar Fishing Calendar — Best Fishing Days by Month","description":"Monthly solunar fishing calendar for your location: best fishing days, moon phases and major feeding times for every day of the month. Free and printable.","path":"solunar-calendar.html","nav":"calendar","hero":"page","h1":"Solunar Fishing Calendar","sub":"Plan your month. Each day shows the moon phase, a 1–4 fish rating and the major feeding times for your chosen location.","scripts":["astro.js","forecast.js"]} -->
+<section style="padding-top:36px">
+  <div class="container" data-fc="calendar">
+    <div class="card no-print" style="margin-bottom:22px">
+      <div class="row2" style="align-items:end">
+        <div><label for="locCal">Location</label><div class="fc-search"><input id="locCal" data-loc-input type="search" placeholder="Search town, lake or harbour" autocomplete="off"><ul class="fc-suggest" data-loc-list role="listbox"></ul></div></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-tide" type="button" data-loc-geo>Use my location</button><button class="btn btn-outline" type="button" data-cal-print>Print calendar</button></div>
+      </div>
+    </div>
+    <div class="section-head"><h2 data-cal-title style="margin:0">—</h2><div class="no-print"><button class="btn btn-outline btn-sm" type="button" data-cal-prev>← Prev</button> <button class="btn btn-outline btn-sm" type="button" data-cal-next>Next →</button></div></div>
+    <div class="cal" data-cal-out></div>
+    <div class="legend"><span><i style="background:#ff7a3d;border-radius:50%"></i>Rating dots: 4 = excellent day</span><span>Times shown = major periods (moon overhead / underfoot)</span><span>Calendar ratings use sky factors; the <a href="forecast.html">7-day forecast</a> adds live weather.</span></div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container narrow">
+    <h2>Using a solunar calendar</h2>
+    <p>Solunar tables, developed by John Alden Knight in the 1920s and published from the 1930s, predict feeding activity from the position of the moon and sun. The best-rated days usually fall within a few days of the new and full moon, when solar and lunar pull line up. Use the calendar to choose <em>which days</em> to fish, then open the <a href="forecast.html">hourly forecast</a> to choose <em>which hours</em>.</p>
+    <ul>
+      <li><strong>4 dots:</strong> top days, usually near new or full moon with major periods at dawn or dusk.</li>
+      <li><strong>3 dots:</strong> good days, worth booking a trip around.</li>
+      <li><strong>1–2 dots:</strong> average days. Weather and location matter more than the moon.</li>
+    </ul>
+    <p>On tidal water, combine this with your local tide table. Moving water around a major period is often the best bite of the month. Want a captain to plan it for you? <a href="charters.html">Request free charter quotes</a>.</p>
+  </div>
+</section>
